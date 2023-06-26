@@ -1,5 +1,3 @@
 [webservers]
 172.31.14.177
 
-[webservers:vars]
-ubuntuwebserver= apache2
