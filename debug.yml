@@ -1,0 +1,21 @@
+---
+- hosts: 172.31.11.85
+  become: yes
+  tasks:
+   - name: i want to run the Linux Commands
+     command: hostname -f
+     register: myresults
+
+   - name: this is the result for the command
+     debug: 
+     msg: "{{myresults}}"
+
+   - name: install tree
+     apt:
+       name: tree
+       state: present
+
+   - name: Install apache2
+     apt: 
+       name: apache2
+       state: present    
